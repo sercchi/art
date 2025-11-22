@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí - Super Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Iconos Phosphor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+  <nav class="bg-black text-white py-4 px-6 fixed w-full top-0 z-50 border-b-4 border-black">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl brand-font font-bold tracking-tighter">
+                <a href="index.html" class="text-2xl brand-font font-bold tracking-tighter">
+                Serchi.<span class="text-[var(--color-pink)]">art</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-sm">
+                <a href="work.html" class="hover:text-[var(--color-pink)] transition-colors">Portafolio</a>
+                <a href="index.html" class="hover:text-[var(--color-pink)] transition-colors">Servicios</a>
+                <a href="personal.html" class="hover:text-[var(--color-pink)] transition-colors">Sobre mí</a>
+            </div>
+
+
+            <button class="hidden md:block bg-white text-black font-bold px-5 py-2 border-2 border-black shadow-[3px_3px_0px_0px_#fff] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all">
+                Descargar CV
+            </button>
+            
+            <button class="md:hidden text-2xl"><i class="ph ph-list"></i></button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (AMARILLO) -->
+    <header class="yellow-section pt-32 pb-24 md:pt-44 md:pb-40 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Texto Hero -->
+            <div class="order-2 md:order-1">
+                <div class="inline-block bg-black text-white font-bold px-3 py-1 mb-4 transform -rotate-2 text-sm">
+                    HUMANO DETRÁS DE LOS PIXELES
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[0.95] text-black mb-6">
+                    Más que un <br>
+                    <span class="text-white text-stroke-black drop-shadow-[3px_3px_0px_rgba(0,0,0,1)]" style="-webkit-text-stroke: 2px black;">Diseñador.</span>
+                </h1>
+                <p class="text-lg font-medium max-w-md mb-8 leading-relaxed">
+                    Soy Serchi ilustrador y diselador, amante de las letras y el color. Construyo marcas que gritan y webs que convierten.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#story" class="btn-primary">
+                        Mi Historia
+                    </a>
+                </div>
+            </div>
+
+            <!-- Foto / Imagen (Estilo Marco Polaroid Grueso) -->
+            <div class="order-2 md:order-3 flex justify-center relative">
+                <div class="relative z-20">
+                    <img src="C:\Users\serch\OneDrive\Escritorio\porfoliio web\img\mia.JPG" 
+                        alt="Foto de Perfil" 
+                        class="profile-frame w-96 h-96 md:w-[28rem] md:h-[28rem] object-cover bg-white p-2">
+                    
+                    <!-- Sticker decorativo -->
+                    <div class="absolute -bottom-6 -right-6 bg-[var(--color-blue)] border-2 border-black px-4 py-3 font-bold shadow-[4px_4px_0px_black] rotate-6 text-sm">
+                        ★ Disponible 2026
+                    </div>
+                </div>
+                
+                <!-- Elementos decorativos de fondo -->
+                <div class="absolute top-0 right-10 w-full h-full border-4 border-black translate-x-4 translate-y-4 -z-0 border-dashed rounded-lg opacity-30"></div>
+            </div>
+        </div>
+
+        <!-- OLA SEPARADORA -->
+        <div class="wave-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- SECCIÓN BIOGRAFÍA & STACK -->
+    <section id="story" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Columna Izquierda: Biografía (8 cols) -->
+            <div class="lg:col-span-7 space-y-8">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-6">El origen de la locura</h2>
+                    <div class="prose prose-lg text-gray-800 font-medium">
+                        <p class="mb-4">
+                                "Pasión por el diseño y la ilustración. Soy Sergio Mora un diseñador e
+                                ilustrador independiente con más de 3 años de experiencia en la creación de
+                                imágenes atractivas y efectivas para una amplia gama de proyectos. Mi
+                                enfoque se basa en combinar mi creatividad con una comprensión profunda
+                                de las necesidades del cliente y las demandas del mercado. Tengo
+                                habilidades en el diseño de logotipos, ilustraciones, dirección de arte en
+                                campañas publicitarias, lettering y edición de video. Utilizo herramientas y
+                                software de diseño de vanguardia, y me mantengo actualizado en las
+                                últimas tendencias y tecnologías. Disfruto colaborar con clientes y
+                                profesionales creativos para entregar proyectos únicos y emocionantes con
+                                calidad excepcional y dentro de los plazos establecidos."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Línea de Tiempo de Experiencia -->
+                <div class="mt-12 p-6 bg-gray-50 border-2 border-black rounded-xl shadow-[6px_6px_0px_black]">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <i class="ph-bold ph-briefcase"></i> Experiencia
+                    </h3>
+                    <div class="space-y-2">
+                        
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-lg">Ilustrador para producciones audiovisuales</h4>
+                            <p class="text-sm text-gray-500 font-mono mb-1">2019 - SENA</p>
+                            <p class="text-sm">Graduado como tecnologo en ilustracion .</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-lg">Diseñador Grafico</h4>
+                            <p class="text-sm text-gray-500 font-mono mb-1">2017 - 2018 ac Estudios en el exterior </p>
+                            <p class="text-sm">Diseño de piezas para rees sociales</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-lg">Freelance </h4>
+                            <p class="text-sm text-gray-500 font-mono mb-1">2020 - 2022</p>
+                            <p class="text-sm">Sobreviviendo a base de logotipos y Lettering.</p>
+                        </div>
+
+                         <div class="timeline-item">
+                            <h4 class="font-bold text-lg">Gestor de proyectos Alcaldia local de Suba</h4>
+                            <p class="text-sm text-gray-500 font-mono mb-1">2023 - 2025</p>
+                            <p class="text-sm">Gestor de proyectos para la oficina de seguridad de la acladia local de suba.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Stack & Stats (4 cols) -->
+            <div class="lg:col-span-5 space-y-8">
+                
+                <!-- Stack Tecnológico (Neo Boxes) -->
+                <div class="bg-[var(--color-pink)] border-2 border-black p-6 shadow-[8px_8px_0px_black]">
+                    <h3 class="text-xl font-bold mb-4 bg-white inline-block px-2 border-2 border-black">Mi Arsenal</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="neo-box p-3 flex items-center gap-2">
+                            <i class="ph-fill ph-figma-logo text-2xl"></i>
+                            <span class="font-bold text-sm">Figma</span>
+                        </div>
+                        <div class="neo-box p-3 flex items-center gap-2">
+                            <i class="ph-fill ph-pen-nib text-2xl"></i>
+                            <span class="font-bold text-sm">Illustrator</span>
+                        </div>
+                        <div class="neo-box p-3 flex items-center gap-2">
+                            <i class="ph-fill ph-code text-2xl"></i>
+                            <span class="font-bold text-sm">HTML/CSS</span>
+                        </div>
+                        <div class="neo-box p-3 flex items-center gap-2">
+                            <i class="ph-fill ph-film-strip text-2xl"></i>
+                            <span class="font-bold text-sm">After Eff.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fun Facts / Stats -->
+                <div class="border-2 border-black p-6 bg-white relative">
+                    <!-- Decoración de esquina -->
+                    <div class="absolute top-0 right-0 bg-black w-4 h-4"></div>
+                    <div class="absolute bottom-0 left-0 bg-black w-4 h-4"></div>
+                    
+                    <h3 class="text-xl font-bold mb-4">Stats Vitales</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b-2 border-gray-100 pb-2">
+                            <span class="font-medium">Cafés / día</span>
+                            <span class="font-black text-xl">4.5</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b-2 border-gray-100 pb-2">
+                            <span class="font-medium">Spotify Wrap</span>
+                            <span class="font-black text-xl">80k min</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b-2 border-gray-100 pb-2">
+                            <span class="font-medium">Proyectos Fallidos</span>
+                            <span class="font-black text-xl">12</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="font-medium">Ganas de crear</span>
+                            <span class="font-black text-xl">∞</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Intereses (Pills) -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Me gusta...</h3>
+                    <div>
+                        <span class="skill-pill bg-yellow-200">🍕 Pizza fría</span>
+                        <span class="skill-pill bg-blue-200">👾 Retro Gaming</span>
+                        <span class="skill-pill bg-green-200">🌿 Plantas</span>
+                        <span class="skill-pill bg-pink-200">🎸 Indie Rock</span>
+                        <span class="skill-pill">📚 Sci-Fi</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="bg-black py-16 px-6 text-center border-t-4 border-[var(--color-pink)]">
+        <h2 class="text-white text-4xl md:text-5xl font-extrabold mb-6">¿Hacemos algo épico?</h2>
+        <p class="text-gray-400 max-w-xl mx-auto mb-8 text-lg">
+            Estoy buscando nuevos retos. Si tienes una idea loca, soy todo oídos.
+    
+        </p>
+    </section>
+
+    <!-- FOOTER (Igual al index) -->
+    <footer class="bg-black text-white py-12 px-6 border-t border-gray-800 relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-8 md:mb-0">
+                <h2 class="text-3xl brand-font font-bold mb-2">
+                    Serchi.<span class="text-[var(--color-pink)]">art</span>
+                </h2>
+                <p class="text-gray-400 text-sm">© 2025 Serchi Design . All rights reserved.</p>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="https://www.instagram.com/serchi.desing/" class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center hover:bg-[var(--color-pink)] hover:scale-110 transition border-2 border-transparent hover:border-black">
+                    <i class="ph-fill ph-instagram-logo text-xl"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center hover:bg-[var(--color-pink)] hover:scale-110 transition border-2 border-transparent hover:border-black">
+                    <i class="ph-fill ph-twitter-logo text-xl"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center hover:bg-[var(--color-pink)] hover:scale-110 transition border-2 border-transparent hover:border-black">
+                    <i class="ph-fill ph-dribbble-logo text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos - Super Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Iconos Phosphor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+          .filter-btn {
+            padding: 8px 24px;
+            border: 2px solid #000;
+            border-radius: 99px;
+            font-weight: 600;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 2px 2px 0px #000;
+        }
+
+
+          .filter-btn:hover, .filter-btn.active {
+            background-color: var(--color-text);
+            color: white;
+            transform: translate(-1px, -1px);
+            box-shadow: 3px 3px 0px var(--color-pink);
+        }
+ .tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border: 2px solid black;
+            box-shadow: 2px 2px 0px black;
+        }
+        .tag-branding { background-color: var(--color-yellow); }
+        .tag-web { background-color: var(--color-orange); }
+        .tag-3d { background-color: var(--color-pink); }
+
+        /* Animación de filtrado */
+        .portfolio-item { transition: opacity 0.3s ease, transform 0.3s ease; }
+        .hidden-item { display: none; }
+    </style>
+
+
+</head>
+<body>
+
+   
+   <nav class="bg-black text-white py-4 px-6 fixed w-full top-0 z-50 border-b-4 border-black">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl brand-font font-bold tracking-tighter">
+                <a href="index.html" class="text-2xl brand-font font-bold tracking-tighter">
+                Serchi.<span class="text-[var(--color-pink)]">art</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-sm">
+                <a href="work.html" class="hover:text-[var(--color-pink)] transition-colors">Portafolio</a>
+                <a href="index.html" class="hover:text-[var(--color-pink)] transition-colors">Servicios</a>
+                <a href="personal.html" class="hover:text-[var(--color-pink)] transition-colors">Sobre mí</a>
+            </div>
+
+            <button class="btn-secondary hidden md:block hover:bg-gray-100 transition">
+                Contáctame
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN PRINCIPAL: SOLO TRABAJOS -->
+    <!-- Añadimos pt-32 para dar espacio respecto al navbar fijo -->
+    <section id="work" class="pt-32 pb-20 px-6 bg-white min-h-screen relative">
+        
+        <!-- Decoración de fondo (puntos sutiles) -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none fixed" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            
+            <!-- Cabecera de la sección -->
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b-4 border-black pb-8">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Trabajos <span class="text-[var(--color-pink)]">Seleccionados</span></h1>
+                    <p class="text-gray-800 font-medium max-w-lg text-lg">
+                        Una colección curada de mis proyectos favoritos. Identidad, Web y Arte Digital.
+                    </p>
+                </div>
+                
+                <!-- Filtros -->
+                <div class="flex flex-wrap gap-3" id="portfolio-filters">
+                    <button class="filter-btn active" onclick="filterPortfolio('all', this)">Todos</button>
+                    <button class="filter-btn" onclick="filterPortfolio('branding', this)">Branding</button>
+                    <button class="filter-btn" onclick="filterPortfolio('web', this)">Web</button>
+                    <button class="filter-btn" onclick="filterPortfolio('3d', this)">3D & Arte</button>
+                </div>
+            </div>
+
+            <!-- Grid de Proyectos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12" id="portfolio-grid">
+                
+                <!-- Proyecto 1 -->
+                <article class="portfolio-item branding neo-box p-4 rounded-lg flex flex-col group bg-white">
+                    <div class="border-2 border-black rounded-md overflow-hidden mb-4 relative h-64">
+                        <img src="C:\Users\serch\OneDrive\Escritorio\porfoliio web\img\ocelote-100.jpg" alt="Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-2 right-2">
+                            <span class="tag tag-branding">Ilustración</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">OCELOTE</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Ilustracion vectorial para portada de disco ocelote.</p>
+                    <a href="#" class="text-black font-bold border-b-2 border-black inline-block w-max hover:text-[var(--color-pink)] hover:border-[var(--color-pink)] transition-colors">Ver Caso Completo &rarr;</a>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="portfolio-item web neo-box p-4 rounded-lg flex flex-col group bg-white">
+                    <div class="border-2 border-black rounded-md overflow-hidden mb-4 relative h-64">
+                        <img src="C:\Users\serch\OneDrive\Escritorio\porfoliio web\img\vespa.jpg" alt="Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-2 right-2">
+                            <span class="tag tag-web">Fotografia</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">VESPA</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Fotohrafia para marca de motos vespa</p>
+                    <a href="#" class="text-black font-bold border-b-2 border-black inline-block w-max hover:text-[var(--color-pink)] hover:border-[var(--color-pink)] transition-colors">Ver Caso Completo &rarr;</a>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="portfolio-item 3d neo-box p-4 rounded-lg flex flex-col group bg-white">
+                    <div class="border-2 border-black rounded-md overflow-hidden mb-4 relative h-64">
+                        <img src="C:\Users\serch\OneDrive\Escritorio\porfoliio web\img\lastime.jpg" alt="Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-2 right-2">
+                            <span class="tag tag-3d">lettering</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">TE LASTIME</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">lettering especiializado para cliente </p>
+                    <a href="#" class="text-black font-bold border-b-2 border-black inline-block w-max hover:text-[var(--color-pink)] hover:border-[var(--color-pink)] transition-colors">Ver Caso Completo &rarr;</a>
+                </article>
+
+                <!-- Proyecto 4 -->
+                <article class="portfolio-item branding neo-box p-4 rounded-lg flex flex-col group bg-white">
+                    <div class="border-2 border-black rounded-md overflow-hidden mb-4 relative h-64">
+                        <img src="C:\Users\serch\OneDrive\Escritorio\porfoliio web\img\logo pryecto.jpg" alt="Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-2 right-2">
+                            <span class="tag tag-branding">Branding</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">SERCHI DESING</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">branding personal para mi marca como diseñador  .</p>
+                    <a href="#" class="text-black font-bold border-b-2 border-black inline-block w-max hover:text-[var(--color-pink)] hover:border-[var(--color-pink)] transition-colors">Ver Caso Completo &rarr;</a>
+                </article>
+
+                 <!-- Proyecto 5 -->
+                 <article class="portfolio-item web neo-box p-4 rounded-lg flex flex-col group bg-white">
+                    <div class="border-2 border-black rounded-md overflow-hidden mb-4 relative h-64">
+                        <img src="C:\Users\serch\OneDrive\Escritorio\porfoliio web\img\audifonos.jpg" alt="Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-2 right-2">
+                            <span class="tag tag-web">Ilustracion</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">ASTRO A40 TEEMO </h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Ilustracion para campaña de audifonos astro a 40 version league of legends</legend>.</p>
+                    <a href="#" class="text-black font-bold border-b-2 border-black inline-block w-max hover:text-[var(--color-pink)] hover:border-[var(--color-pink)] transition-colors">Ver Caso Completo &rarr;</a>
+                </article>
+
+                <!-- Proyecto 6 (Nuevo para rellenar grid) -->
+                <article class="portfolio-item 3d neo-box p-4 rounded-lg flex flex-col group bg-white">
+                    <div class="border-2 border-black rounded-md overflow-hidden mb-4 relative h-64">
+                        <img src="C:\Users\serch\OneDrive\Escritorio\porfoliio web\img\lettering bordado.png" alt="Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-2 right-2">
+                            <span class="tag tag-3d">lettering</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">LETTERING  BORDADO</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Lettering bordado para diferentes tipos de prendas</p>
+                    <a href="#" class="text-black font-bold border-b-2 border-black inline-block w-max hover:text-[var(--color-pink)] hover:border-[var(--color-pink)] transition-colors">Ver Caso Completo &rarr;</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-12 px-6 border-t-4 border-black relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-8 md:mb-0">
+                <h2 class="text-3xl brand-font font-bold mb-2">
+                    serchi<span class="text-[var(--color-pink)]">folio</span>
+                </h2>
+                <p class="text-gray-400 text-sm">© 2025 Serchi Desing.</p>  
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://www.instagram.com/serchi.desing/" class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center hover:bg-[var(--color-pink)] hover:scale-110 transition border-2 border-transparent hover:border-black"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                <a href="#" class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center hover:bg-[var(--color-pink)] hover:scale-110 transition border-2 border-transparent hover:border-black"><i class="ph-fill ph-twitter-logo text-xl"></i></a>
+                <a href="#" class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center hover:bg-[var(--color-pink)] hover:scale-110 transition border-2 border-transparent hover:border-black"><i class="ph-fill ph-dribbble-logo text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT FILTRADO -->
+    <script>
+        function filterPortfolio(category, btn) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.portfolio-item');
+            
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.classList.remove('hidden-item');
+                } else {
+                    if (item.classList.contains(category)) {
+                        item.classList.remove('hidden-item');
+                    } else {
+                        item.classList.add('hidden-item');
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

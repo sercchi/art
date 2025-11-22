@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serchifolio - Diseñador Gráfico</title>
+    <!-- Tailwind CSS (para estructura rápida) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Syne (para títulos estilo la referencia) y Inter (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="bg-black text-white py-4 px-6 fixed w-full top-0 z-50 border-b-4 border-black">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl brand-font font-bold tracking-tighter">
+                <a href="index.html" class="text-2xl brand-font font-bold tracking-tighter">
+                Serchi.<span class="text-[var(--color-pink)]">art</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-sm">
+                <a href="work.html" class="hover:text-[var(--color-pink)] transition-colors">Portafolio</a>
+                <a href="index.html" class="hover:text-[var(--color-pink)] transition-colors">Servicios</a>
+                <a href="personal.html" class="hover:text-[var(--color-pink)] transition-colors">Sobre mí</a>
+            </div>
+
+            <button class="btn-secondary hidden md:block hover:bg-gray-100 transition">
+                Contáctame
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (ROSA) -->
+    <header class="hero-section pt-32 pb-20 md:pt-40 md:pb-32 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Texto Hero -->
+            <div class="space-y-6 z-10">
+                <h1 class="text-6xl md:text-8xl font-extrabold leading-[0.9] text-black drop-shadow-sm">
+                    Hola,<br>
+                    <span class="text-white drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">soy Serchi.</span>
+                </h1>
+                <p class="text-lg md:text-xl font-medium max-w-md border-l-4 border-black pl-4">
+                    Diseñador Visual & artista de lettering. 
+                    <br>Especialista en diseño y lettering, fusionando arte y comunicación visual.
+                </p>
+                <div class="pt-4">
+                    <a href="#services" class="btn-primary text-lg">
+                        Ver Mis Trabajos
+                    </a>
+                </div>
+            </div>
+
+            <!-- Imagen Hero (Placeholder estilo Robot/3D) -->
+            <div class="relative flex justify-center hero-image z-10">
+                <!-- Círculo decorativo detrás -->
+                <div class="absolute w-64 h-64 bg-yellow-300 rounded-full border-4 border-black -z-10 top-10 right-10"></div>
+                
+                <!-- Usamos una imagen de placeholder creativa -->
+                <img src="C:\Users\serch\OneDrive\Escritorio\porfoliio web\img\logo.png"
+                     alt="Creative 3D Abstract" 
+                     class="w-full max-w-md object-cover rounded-xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-white aspect-square grayscale-[20%] hover:grayscale-0 transition duration-500">
+                
+                <!-- Elemento flotante decorativo -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 neo-box rotate-3">
+                    <i class="ph-fill ph-paint-brush-broad text-3xl text-pink-500"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- OLA SEPARADORA -->
+        <div class="wave-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- SECCIÓN SERVICIOS / FEATURE (AMARILLA) -->
+    <section id="services" class="yellow-section py-20 px-6">
+        
+        <!-- Intro Sección -->
+        <div class="max-w-7xl mx-auto mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 relative">
+                
+                <!-- Ilustración Izquierda -->
+                <div class="neo-box bg-white p-2 rounded-xl rotate-[-2deg]">
+                 <a href="work.html">
+                     <img src= "C:\Users\serch\OneDrive\Escritorio\porfoliio web\img\lastime.jpg"> 
+                </div>
+                 <!-- Badge flotante -->
+                 <div class="absolute -top-4 -right-4 bg-[var(--color-pink)] px-4 py-2 border-2 border-black font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    Disponible ahora
+                </div>
+            </div>
+            
+            <div class="order-1 md:order-2">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                    El futuro de tus<br>servicios de diseño.
+                </h2>
+                <p class="text-lg font-medium mb-6">
+                    ¿Necesitas diseño gráfico impactante, lettering o branding que enamore? Bienvenido. 
+                    Soy tu diseñador de confianza, listo para llevar tu visión al siguiente nivel.
+                </p>
+                <ul class="space-y-2 font-bold">
+                    <li class="flex items-center"><i class="ph-bold ph-check-square text-2xl mr-2"></i> Diseño Web & font</li>
+                    <li class="flex items-center"><i class="ph-bold ph-check-square text-2xl mr-2"></i> Branding & Identidad</li>
+                    <li class="flex items-center"><i class="ph-bold ph-check-square text-2xl mr-2"></i> Ilustración & lettering</li>
+                    <li class="flex items-center"><i class="ph-bold ph-check-square text-2xl mr-2"></i> Fotografia</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- GRID DE TARJETAS (CÓMO FUNCIONA) -->
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-center text-3xl font-extrabold mb-12">mis servicios</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Tarjeta 1: Suscribirse -->
+                <div class="bg-white neo-box p-8 rounded-xl flex flex-col items-start relative">
+                    <div class="icon-box rotate-3">
+                        <i class="ph-fill ph-lightning text-4xl text-black"></i>
+                    </div>
+                    <h4 class="text-2xl font-extrabold mb-4">1. Contacta</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        Inicia tu aventura de diseño enviando un mensaje. Definimos el alcance, el presupuesto y los tiempos. Sin letras pequeñas.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 2: Solicitar -->
+                <div class="bg-white neo-box p-8 rounded-xl flex flex-col items-start relative md:-mt-8">
+                    <!-- Nota: El margen negativo en MD crea ese efecto de escalón divertido -->
+                    <div class="icon-box -rotate-2">
+                        <i class="ph-fill ph-paper-plane-tilt text-4xl text-black"></i>
+                    </div>
+                    <h4 class="text-2xl font-extrabold mb-4">2. Solicita</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        ¡Estás dentro! Ahora, lanza tus tareas de diseño. ¿Necesitas un logo? ¿Una landing page? Solo pídelo y lo priorizaremos.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 3: Revisar -->
+                <div class="bg-white neo-box p-8 rounded-xl flex flex-col items-start relative">
+                    <div class="icon-box rotate-1">
+                        <i class="ph-fill ph-eye text-4xl text-black"></i>
+                    </div>
+                    <h4 class="text-2xl font-extrabold mb-4">3. Recibe</h4>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        En pocos días, tendrás tu primer vistazo. Si no es amor a primera vista, no pasa nada. Revisamos hasta que quede perfecto.
+                    </p>
+                </div>
+
+            </div>
+            
+            <!-- Decoración extra (Estrella y lineas de la referencia) -->
+            <div class="hidden md:block absolute right-10 bottom-20">
+                 <div class="flex space-x-2">
+                    <div class="w-16 h-10 bg-white border-2 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center">
+                        <i class="ph-fill ph-star text-2xl"></i>
+                    </div>
+                    <div class="w-16 h-10 bg-white border-2 border-black shadow-[4px_4px_0px_0px_#000] translate-y-8"></div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-12 px-6 border-t-4 border-black relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-8 md:mb-0">
+                <h2 class="text-3xl brand-font font-bold mb-2">
+                    Serchi.<span class="text-[var(--color-pink)]">art</span>
+                </h2>
+                <p class="text-gray-400 text-sm">© 2025 Serchi Design . All rights reserved.</p>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="https://www.instagram.com/serchi.desing/" class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center hover:bg-[var(--color-pink)] hover:scale-110 transition border-2 border-transparent hover:border-black">
+                    <i class="ph-fill ph-instagram-logo text-xl"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center hover:bg-[var(--color-pink)] hover:scale-110 transition border-2 border-transparent hover:border-black">
+                    <i class="ph-fill ph-twitter-logo text-xl"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center hover:bg-[var(--color-pink)] hover:scale-110 transition border-2 border-transparent hover:border-black">
+                    <i class="ph-fill ph-dribbble-logo text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
